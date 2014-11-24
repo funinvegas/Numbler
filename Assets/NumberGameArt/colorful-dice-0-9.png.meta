@@ -1,0 +1,707 @@
+fileFormatVersion: 2
+guid: afb347b7ab2237d49b935b60c979cf56
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: colorful-dice-0-9_0
+    21300002: colorful-dice-0-9_1
+    21300004: colorful-dice-0-9_2
+    21300006: colorful-dice-0-9_3
+    21300008: colorful-dice-0-9_4
+    21300010: colorful-dice-0-9_5
+    21300012: colorful-dice-0-9_6
+    21300014: colorful-dice-0-9_7
+    21300016: colorful-dice-0-9_8
+    21300018: colorful-dice-0-9_9
+    21300020: colorful-dice-0-9_10
+    21300022: colorful-dice-0-9_11
+    21300024: colorful-dice-0-9_12
+    21300026: colorful-dice-0-9_13
+    21300028: colorful-dice-0-9_14
+    21300030: colorful-dice-0-9_15
+    21300032: colorful-dice-0-9_16
+    21300034: colorful-dice-0-9_17
+    21300036: colorful-dice-0-9_18
+    21300038: colorful-dice-0-9_19
+    21300040: colorful-dice-0-9_20
+    21300042: colorful-dice-0-9_21
+    21300044: colorful-dice-0-9_22
+    21300046: colorful-dice-0-9_23
+    21300048: colorful-dice-0-9_24
+    21300050: colorful-dice-0-9_25
+    21300052: colorful-dice-0-9_26
+    21300054: colorful-dice-0-9_27
+    21300056: colorful-dice-0-9_28
+    21300058: colorful-dice-0-9_29
+    21300060: colorful-dice-0-9_30
+    21300062: colorful-dice-0-9_31
+    21300064: colorful-dice-0-9_32
+    21300066: colorful-dice-0-9_33
+    21300068: colorful-dice-0-9_34
+    21300070: colorful-dice-0-9_35
+    21300072: colorful-dice-0-9_36
+    21300074: colorful-dice-0-9_37
+    21300076: colorful-dice-0-9_38
+    21300078: colorful-dice-0-9_39
+    21300080: colorful-dice-0-9_40
+    21300082: colorful-dice-0-9_41
+    21300084: colorful-dice-0-9_42
+    21300086: colorful-dice-0-9_43
+    21300088: colorful-dice-0-9_44
+    21300090: colorful-dice-0-9_45
+    21300092: colorful-dice-0-9_46
+    21300094: colorful-dice-0-9_47
+    21300096: colorful-dice-0-9_48
+    21300098: colorful-dice-0-9_49
+    21300100: colorful-dice-0-9_50
+    21300102: colorful-dice-0-9_51
+    21300104: colorful-dice-0-9_52
+    21300106: colorful-dice-0-9_53
+    21300108: colorful-dice-0-9_54
+    21300110: colorful-dice-0-9_55
+    21300112: colorful-dice-0-9_56
+    21300114: colorful-dice-0-9_57
+    21300116: colorful-dice-0-9_58
+    21300118: colorful-dice-0-9_59
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: colorful-dice-0-9_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_5
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_8
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_9
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 368
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_11
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_12
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_13
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_14
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_15
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_16
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_17
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_18
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_19
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 301
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_21
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_22
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_23
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_24
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_25
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_26
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_27
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_28
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_29
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 234
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_31
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_32
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_33
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_34
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_35
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_36
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_37
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_38
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_39
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 167
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_41
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_42
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_43
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_44
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_45
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_46
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_47
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_48
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_49
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_50
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_51
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_52
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_53
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_54
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_55
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_56
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_57
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_58
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: colorful-dice-0-9_59
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 33
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
