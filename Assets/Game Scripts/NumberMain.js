@@ -13,13 +13,11 @@ private var columns = 5;
 private var spawnPoints: Array = new Array();
 private var spawnPointsLine: Array = new Array();
 private function buildSpawnPoints () {
-	var rowInterval = Mathf.Abs((right - left) / rows);
-	var colInterval = Mathf.Abs((bottom - top) / columns);
 	for( var i = 0; i < rows; ++i ) {
 		spawnPoints.Push(new Array());
 		for (var k = 0; k < columns; ++k) {
-			var point = new Vector3(left + rowInterval * i, top - colInterval * k, -2);
 			var a:Array = spawnPoints[i] as Array;
+			var point = new Vector3(i,k,-2);
 			a.Push(point);
 			spawnPointsLine.Push(point);
 		}
@@ -27,12 +25,13 @@ private function buildSpawnPoints () {
 }
 
 private function spawnNewSet() {
+	var rowInterval = Mathf.Abs((right - left) / rows);
+	var colInterval = Mathf.Abs((bottom - top) / columns);
 	for (var i = 0; i < spawnPointsLine.length; ++i ) {
-		var point:Vector3 = spawnPointsLine[i];
+		var gridPoint:Vector3 = spawnPointsLine[i];
+		var point = new Vector3(left + rowInterval * gridPoint.x, top - colInterval * gridPoint.y, -2);
 		var copy:GameObject = GameObject.Instantiate(GameTileType, point, Quaternion.identity);
-		var textTrans:Transform = copy.transform.FindChild("ScaleContainer/Canvas/Text");
- 		var text:UI.Text = textTrans.GetComponent(UI.Text) as UI.Text;
-		text.text = "" + Mathf.Round(Random.value * 10);
+		(copy.GetComponent(GameBlock) as GameBlock).Initialize(this, gridPoint.x, gridPoint.y,  Mathf.Floor(1 + Random.value * 10));
 	}
 }
 function Start () {
@@ -47,33 +46,44 @@ function Update () {
 
 var platform : RuntimePlatform = Application.platform;
 var mouseOneDown:boolean = false;
+var lastHitObject:GameObject = null;
+
 function CheckInput() {
+	var hitObject:GameObject = null;
 	//if (platform == RuntimePlatform.Android || platform == RuntimePlatform.IPhonePlayer){
-		if (Input.touchCount > 0) {
+		if (Input.touchCount > 0 && !hitObject) {
 			var phase = Input.GetTouch(0).phase;
 			if ( phase == TouchPhase.Began){
-				checkTouch(Input.GetTouch(0).position, "begin");
+				hitObject = checkTouch(Input.GetTouch(0).position, "begin");
 			} else if ( phase == TouchPhase.Ended ) {
-				checkTouch(Input.GetTouch(0).position, "end");
+				hitObject = checkTouch(Input.GetTouch(0).position, "end");
 			} else if ( phase == TouchPhase.Moved ) {
-				checkTouch(Input.GetTouch(0).position, "drag");
+				hitObject = checkTouch(Input.GetTouch(0).position, "drag");
 			}
 		}
 	//} else if (platform == RuntimePlatform.WindowsEditor){
 	//	Debug.Log("mouse input");
-		if (Input.GetMouseButton(0)) {
+		if (Input.GetMouseButton(0) && !hitObject) {
 			if (!mouseOneDown) {
-				Debug.Log("mouse input down");
-				checkTouch(Input.mousePosition, "begin");
+				hitObject = checkTouch(Input.mousePosition, "begin");
 			} else {
+				hitObject = lastHitObject;
 				if (Input.GetAxis("Mouse X") || Input.GetAxis("Mouse Y")) {
-					Debug.Log("mouse moved Y");
-					checkTouch(Input.mousePosition, "drag");
+					hitObject = checkTouch(Input.mousePosition, "drag");
 				}
 			}
 			mouseOneDown = true;
 		} else {
+			if (mouseOneDown) {
+				this.touchFinish();
+			}
 			mouseOneDown = false;
+		}
+		if (hitObject !== lastHitObject) {
+			if (lastHitObject) {
+				lastHitObject.SendMessage("handleInput", "done", SendMessageOptions.DontRequireReceiver);
+			}
+			lastHitObject = hitObject;
 		}
 	//} else {
 	//RuntimePlatform.
@@ -87,5 +97,31 @@ function checkTouch(pos, type) {
 	if (hit) {
 		Debug.Log(hit.transform.gameObject.name);
 		hit.transform.gameObject.SendMessage('handleInput',type,SendMessageOptions.DontRequireReceiver);
+		return hit.gameObject;
 	}
+	return null;
 }
+
+var selectedBlocks:Array = new Array();
+function touchFinish () {
+	for (var i = 0; i < selectedBlocks.length; ++i) {
+		(selectedBlocks[i] as GameBlock).deselect();
+	}
+	selectedBlocks = new Array();
+}
+
+function addBlock (block:GameBlock):boolean {
+	if (selectedBlocks.length > 0 ) {
+		var lastBlock:GameBlock = selectedBlocks[selectedBlocks.length-1] as GameBlock;
+		if ((Mathf.Abs(lastBlock.gridPointX - block.gridPointX) +
+			Mathf.Abs(lastBlock.gridPointY - block.gridPointY) > 1)) {
+			return false;
+		}
+		if (lastBlock.numberValue > block.numberValue) {
+			return false;
+		}
+	}
+	selectedBlocks.Push(block);
+	return true;
+}
+
