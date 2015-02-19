@@ -5,7 +5,6 @@ function Start () {
 }
 
 function Update () {
-
 }
 private var gameMain:NumberMain = null;
 public var gridPointX:int = 0;
@@ -39,21 +38,28 @@ private function select () {
 			var scaleContainer:Transform = null;
 			scaleContainer = this.transform.FindChild("ScaleContainer") as Transform;
 			scaleContainer.localScale = new Vector3(0.5,0.5,1);
-			var animation:Animation = this.transform.FindChild("ScaleContainer").GetComponent(Animation);
-			animation.Play();
+			var animation:Animation = this.GetComponent(Animation);
+			animation.Play("GameBlockSelectedAnimation"	);
 		}
 	}
 }
 
 public function deselect() {
 	selected = false;
-	var animation:Animation = this.transform.FindChild("ScaleContainer").GetComponent(Animation);
+	var animation:Animation = this.transform.GetComponent(Animation);
 	animation.Rewind("GameBlockSelectedAnimation");
 	animation.Sample();
 	animation.Stop();
+	animation.Play("GameBlockDestroyAnimation");
 	var scaleContainer:Transform = null;
 	scaleContainer = this.transform.FindChild("ScaleContainer") as Transform;
 	scaleContainer.localScale = new Vector3(1,1,1);
-//	animation["GameBlockSelectedAnimation"].time = 0;
-//	animation.Stop();
+}
+
+public function finishDestroyAnimation() {
+	animation.Rewind("GameBlockDestroyAnimation");
+	animation.Sample();
+	animation.Stop();
+	gameMain.destroyBlock(this);
+
 }
