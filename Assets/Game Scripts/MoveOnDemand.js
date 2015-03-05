@@ -18,13 +18,14 @@ private var startTime: float;
 private var endTime: float;	
 // Total distance between the markers.
 private var journeyLength: float;
-	
+private var completeCallback: Function	;
 private var smooth = 5.0;
 	
-public function MoveTo(targetX:float, targetY:float, moveSpeed:float) {
+public function MoveTo(targetX:float, targetY:float, moveSpeed:float, callback:Function) {
 	// Keep a note of the time the movement started.
 	startTime = Time.time;
 	speed = moveSpeed;
+	completeCallback = callback;
 	startPoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
 	destinationPoint = new Vector3(targetX, targetY, this.transform.position.z);
 	// Calculate the journey length.
@@ -39,6 +40,8 @@ private function UpdateMove () {
 		var now = Time.time;
 		if (now > endTime) {
 			transform.position = new Vector3(destinationPoint.x, destinationPoint.y, destinationPoint.z);
+			moving = false;
+			completeCallback();
 		} else {
 			// Distance moved = time * speed.
 			var distCovered = (Time.time - startTime) * speed;

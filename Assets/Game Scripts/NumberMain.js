@@ -3,6 +3,10 @@
 // Unity scene input
 public var GameTileType:GameObject;
 
+// Player Score object
+// combined tiles are animated twards this, and score is kept on it
+public var playerScore:GameObject = null;
+
 // Grid layout
 private var edge = 32;
 private var top = -(96+edge);
@@ -28,10 +32,10 @@ private function buildSpawnPoints () {
 	}
 }
 private function spawnBlock(gridX, gridY) {
-		var gridPoint = new Vector3(gridX, gridY, 1);
+		var gridPoint = new Vector3(gridX, gridY, 10);
 		var point = new Vector3(left + rowInterval * gridPoint.x, top - colInterval * gridPoint.y, -2);
 		var copy:GameObject = GameObject.Instantiate(GameTileType, point, Quaternion.identity);
-		(copy.GetComponent(GameBlock) as GameBlock).Initialize(this, gridPoint.x, gridPoint.y,  Mathf.Floor(1 + Random.value * 10));
+		(copy.GetComponent(GameBlock) as GameBlock).Initialize(this, gridPoint.x, gridPoint.y,  Mathf.Floor(1 + Random.value * 9));
 }
 private function spawnNewSet() {
 	for (var i = 0; i < spawnPointsLine.length; ++i ) {
@@ -100,7 +104,7 @@ private function checkTouch(pos, type) {
 	var touchPos : Vector2 = new Vector2(wp.x, wp.y);
 	var hit = Physics2D.OverlapPoint(touchPos);
 	if (hit) {
-		Debug.Log(hit.transform.gameObject.name);
+		//Debug.Log(hit.transform.gameObject.name);
 		hit.transform.gameObject.SendMessage('handleInput',type,SendMessageOptions.DontRequireReceiver);
 		return hit.gameObject;
 	}
@@ -111,8 +115,15 @@ private var selectedBlocks:Array = new Array();
 private var expectedBlockDestroys = 0;
 private function touchFinish () {
 	expectedBlockDestroys = selectedBlocks.length;
+	var scoreBlocks = false;
+	if (selectedBlocks.length >= 3) {
+		scoreBlocks = true;
+	}
 	for (var i = 0; i < selectedBlocks.length; ++i) {
-		(selectedBlocks[i] as GameBlock).deselect();
+		(selectedBlocks[i] as GameBlock).deselect(scoreBlocks);
+	}
+	if (scoreBlocks) {
+		(playerScore.GetComponent("PlayerScore") as PlayerScore).addBlocksToScore(selectedBlocks);
 	}
 	selectedBlocks = new Array();
 }
@@ -132,8 +143,21 @@ public function addBlock (block:GameBlock):boolean {
 	return true;
 }
 
+public function checkForReverse(block:GameBlock) {
+	if (selectedBlocks.length >= 2) {
+		if (selectedBlocks[selectedBlocks.length-2] == block) {
+			(selectedBlocks[selectedBlocks.length -1] as GameBlock).deselect(false);
+			selectedBlocks.RemoveAt(selectedBlocks.length-1);
+		}
+	}
+}
+
 public function destroyBlock (block:GameBlock) {
 	spawnBlock(block.gridPointX, block.gridPointY);
 	//Destroy(block.gameObject);	
-	block.GetComponent(MoveOnDemand).MoveTo(0,0, 400);
+	// TODO investigate why xy need 32 mod
+	block.animation.Play("GameBlockSpinAnimation");
+	block.GetComponent(MoveOnDemand).MoveTo(playerScore.transform.position.x +32,playerScore.transform.position.y + 32, 400, function () {
+		Destroy(block.gameObject);
+	});
 }

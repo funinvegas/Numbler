@@ -1,7 +1,6 @@
 ﻿#pragma strict
 
 function Start () {
-	Debug.Log("localScale = " + this.transform.localScale.ToString());
 }
 
 function Update () {
@@ -18,15 +17,14 @@ function Initialize(_gameMain, x, y, n) {
 	var textTrans:Transform = this.transform.FindChild("ScaleContainer/Canvas/Text");
 	var text:UI.Text = textTrans.GetComponent(UI.Text) as UI.Text;
 	text.text = "" + numberValue;
+	this.animation.Play("GameBlockSpawnAnimation");
 }
 
 function handleInput (type) {
-	Debug.Log("Object hit ! " + this.name);
 	if (type === "done") {
 	} else {
 		this.select();
 	}
-	Debug.Log("localScale = " + this.transform.localScale.ToString());
 }
 
 private var selected = false;
@@ -41,19 +39,23 @@ private function select () {
 			var animation:Animation = this.GetComponent(Animation);
 			animation.Play("GameBlockSelectedAnimation"	);
 		}
+	} else {
+		gameMain.checkForReverse(this);
 	}
 }
 
-public function deselect() {
+public function deselect(destroy) {
 	selected = false;
 	var animation:Animation = this.transform.GetComponent(Animation);
 	animation.Rewind("GameBlockSelectedAnimation");
 	animation.Sample();
 	animation.Stop();
-	animation.Play("GameBlockDestroyAnimation");
-	var scaleContainer:Transform = null;
-	scaleContainer = this.transform.FindChild("ScaleContainer") as Transform;
-	scaleContainer.localScale = new Vector3(1,1,1);
+	if (destroy) {
+		animation.Play("GameBlockDestroyAnimation");
+		var scaleContainer:Transform = null;
+		scaleContainer = this.transform.FindChild("ScaleContainer") as Transform;
+		scaleContainer.localScale = new Vector3(1,1,1);
+	}
 }
 
 public function finishDestroyAnimation() {
