@@ -17,7 +17,7 @@ function Initialize(_gameMain, x, y, n) {
 	var textTrans:Transform = this.transform.FindChild("ScaleContainer/Canvas/Text");
 	var text:UI.Text = textTrans.GetComponent(UI.Text) as UI.Text;
 	text.text = "" + numberValue;
-	this.animation.Play("GameBlockSpawnAnimation");
+	this.GetComponent.<Animation>().Play("GameBlockSpawnAnimation");
 }
 
 function handleInput (type) {
@@ -59,9 +59,9 @@ public function deselect(destroy) {
 }
 
 public function finishDestroyAnimation() {
-	animation.Rewind("GameBlockDestroyAnimation");
-	animation.Sample();
-	animation.Stop();
+	GetComponent.<Animation>().Rewind("GameBlockDestroyAnimation");
+	GetComponent.<Animation>().Sample();
+	GetComponent.<Animation>().Stop();
 	gameMain.destroyBlock(this);
 
 }

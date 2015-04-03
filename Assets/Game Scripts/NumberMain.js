@@ -156,7 +156,7 @@ public function destroyBlock (block:GameBlock) {
 	spawnBlock(block.gridPointX, block.gridPointY);
 	//Destroy(block.gameObject);	
 	// TODO investigate why xy need 32 mod
-	block.animation.Play("GameBlockSpinAnimation");
+	block.GetComponent.<Animation>().Play("GameBlockSpinAnimation");
 	block.GetComponent(MoveOnDemand).MoveTo(playerScore.transform.position.x +32,playerScore.transform.position.y + 32, 400, function () {
 		Destroy(block.gameObject);
 	});

@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 private var scoreText:UI.Text;
-private var displayedScore:Number = 0;
+private var displayedScore:double = 0;
 private var currentScore:Number = 0;
 private var scoreVelocity:float = 1;
 private var scoreVelocityStart:float = 0;
@@ -22,15 +22,14 @@ function Update () {
 			}
 		}
 		if (currentScore > displayedScore) {
-			Debug.Log("Adding " + (now -  scoreVelocityStart) * scoreVelocity);
 			displayedScore += (now -  scoreVelocityStart) * scoreVelocity;
 			if (currentScore < displayedScore) {
 				displayedScore = currentScore;
 			}
 		}
 		scoreVelocityStart = now;
-		var displayText:String = "" + displayedScore;;
-		var commaCount = (Mathf.Ceil((displayText.length) / 3) - 1);
+		var displayText:String = "" + Mathf.Floor(displayedScore);
+		var commaCount = (Mathf.Floor(((displayText.length-1)) / 3));
 		for( var i = 0; i < commaCount; ++i) {
 			displayText = displayText.Insert((displayText.length - ((4 * (i+1)) - 1)), ",");
 		}
@@ -39,16 +38,16 @@ function Update () {
 }
 
 public function addBlocksToScore(blocks:Array) {
-	var scoreToAdd:int = 0;
+	var scoreToAdd:int = 1;
 	for( var i = 0; i < blocks.length; ++i ) {
 		var block:GameBlock = blocks[i];
-		var digitCounter = block.numberValue;
+/*		var digitCounter = block.numberValue;
 		while (digitCounter >= 10) {
 			scoreToAdd *= 10;
 			digitCounter /= 10;
 		}
-		scoreToAdd *= 10;
-		scoreToAdd = scoreToAdd + block.numberValue;
+		scoreToAdd *= 10;*/
+		scoreToAdd = scoreToAdd * block.numberValue;
 	}
 	this.addValueToScore(scoreToAdd);
 }
